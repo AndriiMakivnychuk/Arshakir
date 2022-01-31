@@ -1,0 +1,116 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.header {
+
+    .burger-menu__button {
+        position: relative;
+        display: block;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #F2994A;
+        transition: 0.4s;
+
+
+        &:hover .burger-menu__lines {
+            opacity: 0.8;
+        }
+    }
+
+    .burger-menu__lines,
+    .burger-menu__lines::after,
+    .burger-menu__lines::before {
+        position: absolute;
+        width: 14px;
+        height: 6px;
+        background-color: #FFF;
+        border-radius: 2px;
+    }
+
+    .burger-menu__lines {
+        transition: .2s all;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .burger-menu__lines::before {
+        display: none;
+        content: '';
+
+    }
+
+    .burger-menu__lines::after {
+        content: '';
+        top: 10px;
+    }
+
+
+    .burger-menu__active .burger-menu__lines {
+        background-color: transparent;
+    }
+
+    .burger-menu__active .burger-menu__lines::after {
+        top: 53%;
+        left: -3px;
+        transform: translate(-50%);
+        transform: rotate(45deg);
+        width: 20px;
+    }
+
+    .burger-menu__active .burger-menu__lines::before {
+
+        display: block;
+        top: 53%;
+        left: -3px;
+        transform: translate(-50%);
+        width: 20px;
+        transform: rotate(-45deg);
+    }
+
+    .burger-menu__active .burger-menu__lines {
+        background-color: transparent;
+    }
+
+    .burger-menu__nav {
+        position: absolute;
+        width: 150px;
+        padding-top: 36px;
+        display: flex;
+        flex-flow: column;
+        height: 300px;
+        background-color: grey;
+        left: -100%;
+        transition: .5s;
+    }
+
+    .burger-menu__active .burger-menu__nav {
+        left: 0;
+    }
+
+    .burger-menu__link {
+        margin-bottom: 30px;
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 20px;
+        /* identical to box height, or 167% */
+
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        /* Text */
+
+        color: #B5B5B5;
+    }
+
+
+    // .burger-menu__overlay {
+    //     display: none;
+    //     width: 100vw;
+    //     height: 100vh;
+    // }
+}
