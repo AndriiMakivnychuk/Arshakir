@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('../fonts/Gilroy-Regular.svg') format('svg'),
+        url('../fonts/Gilroy-Regular.ttf') format('truetype'),
+        url('../fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Gilroy-Regular';
+}
+
 .header {
 
     .burger-menu__button {
